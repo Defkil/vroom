@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "lib": ["es6", "dom"],
+    "types": ["reflect-metadata", "three"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["node_modules/@types"],
+  },
+    "exclude": [
+        "node_modules",
+        "dist",
+    ],
+    "include": [
+        "src/**/*"
+    ]
+}
