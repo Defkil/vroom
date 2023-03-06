@@ -14,13 +14,16 @@ const plugins = [
   new HtmlWebpackPlugin({ template: 'index.html' }),
   new ESLintPlugin({ extensions: ['ts', 'tsx'] }),
   new ForkTsCheckerWebpackPlugin(),
-  new BundleAnalyzerPlugin(),
   new webpack.ProvidePlugin({
     three: 'three',
     enable3d: 'enable3d'
   }),
   new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
 ]
+
+if (!isProduction) {
+  plugins.push(new BundleAnalyzerPlugin())
+}
 
 const config = {
   entry: {
